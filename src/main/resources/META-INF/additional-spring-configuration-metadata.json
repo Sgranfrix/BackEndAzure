@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "azure.cosmos.secondaryKey",
+      "type": "java.lang.String",
+      "description": "Description for azure.cosmos.secondaryKey."
+  }
+] }
