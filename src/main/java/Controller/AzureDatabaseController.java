@@ -86,7 +86,7 @@ public class AzureDatabaseController {
     public ResponseEntity<byte[]> downloadFolder(@RequestParam("folderName") String folderName) {
         try {
             BlobContainerClient containerClient = blobServiceClient.getBlobContainerClient("lazyhoundcontainer");
-            String zipFilePath = "/Users/sgranfrix/Download"; // Percorso in cui memorizzare il file ZIP
+            String zipFilePath = "/Users/sgranfrix/Download"+ folderName + ".zip"; // Percorso in cui memorizzare il file ZIP
             FileOutputStream fileOutputStream = new FileOutputStream(zipFilePath);
             ZipArchiveOutputStream zipOutputStream = new ZipArchiveOutputStream(fileOutputStream);
             Iterable<BlobItem> blobs = containerClient.listBlobsByHierarchy( folderName + "/");
